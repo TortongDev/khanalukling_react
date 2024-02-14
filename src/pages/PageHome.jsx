@@ -1,6 +1,7 @@
 
 import  IncludeHeader  from "../includes/IncludeHeader";
 import  IncludeNavbar  from "../includes/IncludeNavbar";
+import  IncludeNavbarMobile  from "../includes/IncludeNavbarMobile";
 import React, { useEffect } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
 import  $  from "jquery";
@@ -19,6 +20,7 @@ function PageHome (){
     return(<>
         <IncludeHeader />
         <IncludeNavbar />
+        <IncludeNavbarMobile />
         <div className="wrapper-slide">
             <div class="fade">
                 <div className="flex">
@@ -40,7 +42,9 @@ function PageHome (){
         </div>
         <article className="wrapper-gallery">
             <section>
-                <div className="img-gallery"></div>
+                <div className="img-gallery">
+                    <img src="/khanalukling_react/public/images/banner/LINE_ALBUM_3224_240214_1.jpg" alt="" />
+                </div>
                 <div className="text-gallery">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
                 </div>

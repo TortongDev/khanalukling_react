@@ -43,6 +43,9 @@ nav ul li {
     display: inline;
     padding: 10px;
 }
+.menu-mobile {
+    display: none;
+}
 
 @media screen and (max-width: 992px) {
    .wrapper-navbar {
@@ -66,4 +69,21 @@ nav ul li {
     header {
         padding-inline: 10px;
     }
+    .menu-mobile {
+        display: block;
+        background-color: blue;
+        height: 100px;
+    }
+    .menu-mobile > ul {
+        display: block;
+        float: left;
+    }
+    .menu-mobile > ul > li {
+        padding: 10px;
+    }
+    .menu-mobile > ul > li > a {
+        text-decoration: none;
+        color: white;
+    }
+    
 }
