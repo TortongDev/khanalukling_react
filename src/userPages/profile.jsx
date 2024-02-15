@@ -1,4 +1,4 @@
-import '../css/style.css';
+import IncludeFooter from '../includes/IncludeFooter';
 import IncludeHeader from '../includes/IncludeHeader';
 import IncludeNavbarUser from '../includes/IncludeNavbarUser';
 function Profile(){
@@ -9,16 +9,39 @@ function Profile(){
             <div className="wrapper-container">
                 <div className="wrapper-profile">
                     <div className="img-profile">
-                        Lorem ipsum dolor sit amet.
+                        Profile Image
                     </div>
                     <div className="text-header">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, fuga?
+                        <h3><i class="fa-regular fa-id-card"></i> My Profile</h3>
                     </div>
                     <div className="text-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia et voluptate, odit dolor omnis id laborum? Officiis dolor vitae repudiandae debitis cumque animi itaque vero quae numquam! Possimus pariatur eaque quibusdam deleniti consequuntur! Architecto nisi odit doloribus consectetur repellat, ipsam amet placeat cumque voluptatum possimus nemo, cupiditate praesentium commodi? Animi, aperiam? Voluptates voluptate error mollitia animi sed accusantium perferendis nam deleniti, aperiam amet quam non quod eos laudantium provident sapiente nihil molestias sequi iste incidunt! Enim porro laboriosam sint dolores velit voluptatibus suscipit nulla tenetur quaerat distinctio quasi alias fuga eveniet natus ipsam, a laudantium neque atque assumenda ea.
+                        <table className='table-profile w3-table-all'>
+                            <tr>
+                                <th>Username</th>
+                                <td>tortong91</td>
+                            </tr>
+                            <tr>
+                                <th>First Name</th>
+                                <td>kittithat</td>
+                            </tr>
+                            <tr>
+                                <th>Last Name</th>
+                                <td>charonekhet</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>kittithat@mail.com</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dignissimos.</td>
+                            </tr>
+                           
+                        </table>
                     </div>
                 </div>
             </div>
+            <IncludeFooter />
         </>
     );
 }
