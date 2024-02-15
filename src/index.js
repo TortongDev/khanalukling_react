@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import PageHome from './pages/PageHome';
+import PageHomeUser from './userPages/PageHome';
 const router = createBrowserRouter([
   {
     path:'/',element: <PageHome />
   },
   {
-    path:'/about',element: <PageHome />
+    path:'/users',element: <PageHomeUser />
     
   }
 ])
