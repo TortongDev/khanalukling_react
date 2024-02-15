@@ -38,7 +38,8 @@ function PageHome (){
             </div>
         </div>
         <div className="tabbar-title">
-            <h4 style={{margin:'0px'}}>Header 1</h4>
+            <h4 style={{margin:'0px'}}>รีวิวมาใหม่</h4>
+            <h4><i class="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-gallery">
             <section>
