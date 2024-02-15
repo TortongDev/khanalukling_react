@@ -5,13 +5,19 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import PageHome from './pages/PageHome';
 import PageHomeUser from './userPages/PageHome';
+import Profile from './userPages/profile';
 const router = createBrowserRouter([
   {
-    path:'/',element: <PageHome />
+    path:'/',
+    element: <PageHome />
   },
   {
-    path:'/users',element: <PageHomeUser />
-    
+    path:'/users',
+    element: <PageHomeUser />
+  },
+  {
+    path: '/user-profile',
+    element: <Profile />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

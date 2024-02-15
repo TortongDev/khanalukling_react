@@ -67,15 +67,17 @@
     background-color: rgb(241, 241, 241);
 }
 .wrapper-container > .wrapper-profile {
-    width: 90%;
-    height: 90%;
+    width: 500px;
+    height: 500px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    padding-block: 100px;
+    margin: auto;
 }
 .wrapper-container > .wrapper-profile > .img-profile {
+    margin-block: 20px;
     width: 300px;
-    height: 490px;
+    height: 290px;
     background-color: silver;
     margin: auto;
 
