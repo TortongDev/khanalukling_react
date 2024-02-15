@@ -30,7 +30,8 @@
     display: flex;
     align-items: center;
     color: #ffffff;
-    padding: 10px;
+    padding-block: 10px;
+    padding-inline: 40px;
 }
 .wrapper-gallery {
     display: grid;
@@ -46,8 +47,9 @@
 }
 .img-gallery {
     width: 98%;
-    height: 100px;
+    height: 150px;
     margin: auto;
+    margin-block: 10px;
     background-color: whitesmoke;
 }
 .text-gallery{

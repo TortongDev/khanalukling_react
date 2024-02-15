@@ -49,6 +49,38 @@ function PageHome (){
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
                 </div>
             </section>
+            <section>
+                <div className="img-gallery">
+                    <img src="/khanalukling_react/public/images/banner/LINE_ALBUM_3224_240214_1.jpg" alt="" />
+                </div>
+                <div className="text-gallery">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                </div>
+            </section>
+            <section>
+                <div className="img-gallery">
+                    <img src="/khanalukling_react/public/images/banner/LINE_ALBUM_3224_240214_1.jpg" alt="" />
+                </div>
+                <div className="text-gallery">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                </div>
+            </section>
+            <section>
+                <div className="img-gallery">
+                    <img src="/khanalukling_react/public/images/banner/LINE_ALBUM_3224_240214_1.jpg" alt="" />
+                </div>
+                <div className="text-gallery">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                </div>
+            </section>
+            <section>
+                <div className="img-gallery">
+                    <img src="/khanalukling_react/public/images/banner/LINE_ALBUM_3224_240214_1.jpg" alt="" />
+                </div>
+                <div className="text-gallery">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                </div>
+            </section>
         </article>
     </>);
 }
