@@ -66,17 +66,19 @@
     height: 100%;
 }
 .wrapper-container > .wrapper-profile {
-    width: 500px;
+    width: 600px;
     height: inherit;
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding-block-start: 150px;
 }
 .wrapper-container > .wrapper-profile > .img-profile {
     width: 300px;
-    height: 250px;
+    height: 300px;
     background-color: silver;
     margin: 20px auto;
+    border-radius: 50%;
 }
 .text-header {
     margin-top: 20px;

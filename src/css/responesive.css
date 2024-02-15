@@ -27,10 +27,12 @@
          height: 50px;
          background-color: var(--bgNavbar);
          height: inherit;
-         width: inherit;
+         position: fixed;
+         margin-block-start: 50px;
+         width: 100%;
      }
      .menu-mobile > ul {
-         width: inherit;
+         width: 100%;
          padding-inline: 10px; 
          list-style: none;
          background-color: var(--bgNavbar);
@@ -51,6 +53,14 @@
      }
      .wrapper-gallery {
          grid-template-columns: 1fr !important;
+     }
+     .wrapper-profile{
+        width: 100% !important;
+        padding: 8px;
+     }
+     .wrapper-profile .img-profile {
+        width: 100%  !important;
+        padding: 10px;
      }
  
      

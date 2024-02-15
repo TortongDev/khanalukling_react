@@ -8,6 +8,7 @@
 header {
     font-family: "Kanit", sans-serif;
     font-weight: 600;
+    width: 100%;
     height: 50px;
     background-color: var(--bgDefault);
     color: white;
@@ -15,6 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-inline: 40px;
+    position: fixed;
 }
 
 .title-header {
@@ -31,9 +33,11 @@ header {
 .slide-menu-mobile {
     display: none;
 }
-.wrapper-navbar {
+.wrapper-navbar { 
+    width: 100%;
+    margin-block-start: 50px;
+    position: fixed;
     background-color: rgb(247, 247, 247);
-    margin: auto;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
 }
@@ -47,12 +51,12 @@ nav.wrapper-navbar ul li {
     display: inline;
     padding: 10px;
 }
-.menu-mobile {
-    display: none;
-}
 .navbar-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline-end: 40px;
+}
+.menu-mobile {
+    display: none;
 }

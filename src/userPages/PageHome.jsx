@@ -20,7 +20,6 @@ function PageHomeUser (){
     return(<>
         <IncludeHeader />
         <IncludeNavbarUser />
-        
         <IncludeNavbarMobileUser />
         <div className="wrapper-slide">
             <div class="fade">

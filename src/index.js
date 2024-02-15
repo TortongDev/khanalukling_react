@@ -12,6 +12,7 @@ import PageHome from './pages/PageHome';
 import PageHomeUser from './userPages/PageHome';
 import Profile from './userPages/profile';
 const router = createBrowserRouter([
+  
   {
     path:'/',
     element: <PageHome />
@@ -24,10 +25,11 @@ const router = createBrowserRouter([
     path: '/user-profile',
     element: <Profile />
   }
-])
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+    <RouterProvider router={router}  />
 );
 
 // If you want to start measuring performance in your app, pass a function
