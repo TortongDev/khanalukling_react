@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
+import './css/footer.css';
+import './css/header.css';
+import './css/style.css';
+import './css/responesive.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import PageHome from './pages/PageHome';

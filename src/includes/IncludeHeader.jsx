@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import '../css/header.css';
-import '../css/style.css';
+
 function IncludeHeader()
 {
     useEffect(()=>{

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --bgDefault: rgb(91, 112, 228);
-    --bgDefaultMobile: rgb(69, 92, 224);
+    --bgNavbar: rgb(69, 92, 224);
+    --bgNavbar1: rgb(247, 247, 247);
+    --bgFooter: rgb(238, 235, 235);
 }
 header {
     font-family: "Kanit", sans-serif;
@@ -53,61 +55,4 @@ nav.wrapper-navbar ul li {
     justify-content: space-between;
     align-items: center;
     padding-inline-end: 40px;
-}
-
-@media screen and (max-width: 992px) {
-   .wrapper-navbar {
-        display: none;
-   }
-   .wrapper-header {
-        text-align: center;
-        padding-top: 5px;
-   }
-   .slide-menu-mobile {
-        display: block;
-        padding: 5px;
-        border: 1px solid var(--bgDefault);
-        border-radius: 3px;
-        background-color: blue;
-        color: white;
-   }
-   .slide-menu-pc {
-        display: none;
-    }
-    header {
-        padding-inline: 10px;
-    }
-    .menu-mobile {
-        display: none;
-        align-items: center;
-        height: 50px;
-        background-color: var(--bgDefaultMobile);
-        height: inherit;
-        width: inherit;
-    }
-    .menu-mobile > ul {
-        width: inherit;
-        padding-inline: 10px; 
-        list-style: none;
-        background-color: var(--bgDefaultMobile);
-    }
-    .menu-mobile > ul > li {
-        display: block;
-        padding: 5px;
-    }
-    .menu-mobile > ul > li > a {
-        text-decoration: none;
-        color: white;
-    }
-    .profile-icon {
-
-    }
-    .profile-mobile {
-        display: block;
-    }
-    .wrapper-gallery {
-        grid-template-columns: 1fr !important;
-    }
-
-    
 }
