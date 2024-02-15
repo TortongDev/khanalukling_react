@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --bgDefault: rgb(91, 112, 228);
+    --bgDefaultMobile: rgb(69, 92, 224);
 }
 header {
     font-family: "Kanit", sans-serif;
@@ -13,6 +14,7 @@ header {
     align-items: center;
     padding-inline: 40px;
 }
+
 .title-header {
     display: block;
 }
@@ -33,18 +35,24 @@ header {
     font-family: "Kanit", sans-serif;
     font-weight: 300;
 }
-nav ul {
+nav.wrapper-navbar ul {
     margin: 0;
     background-color: rgb(247, 247, 247);
     padding: 10px;
     padding-inline-start: 30px;
 }
-nav ul li {
+nav.wrapper-navbar ul li {
     display: inline;
     padding: 10px;
 }
 .menu-mobile {
     display: none;
+}
+.navbar-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-end: 40px;
 }
 
 @media screen and (max-width: 992px) {
@@ -70,20 +78,36 @@ nav ul li {
         padding-inline: 10px;
     }
     .menu-mobile {
-        display: block;
-        background-color: blue;
-        height: 100px;
+        display: none;
+        align-items: center;
+        height: 50px;
+        background-color: var(--bgDefaultMobile);
+        height: inherit;
+        width: inherit;
     }
     .menu-mobile > ul {
-        display: block;
-        float: left;
+        width: inherit;
+        padding-inline: 10px; 
+        list-style: none;
+        background-color: var(--bgDefaultMobile);
     }
     .menu-mobile > ul > li {
-        padding: 10px;
+        display: block;
+        padding: 5px;
     }
     .menu-mobile > ul > li > a {
         text-decoration: none;
         color: white;
     }
+    .profile-icon {
+
+    }
+    .profile-mobile {
+        display: block;
+    }
+    .wrapper-gallery {
+        grid-template-columns: 1fr !important;
+    }
+
     
 }

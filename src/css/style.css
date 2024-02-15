@@ -10,6 +10,9 @@
     justify-content: center;
     align-items: center;
 }
+.fadeIn {
+    transition: 1s;
+}
 .fade {display: none;}
 .slick-arrow {
     position: absolute;
@@ -57,4 +60,23 @@
     padding: 3px;
     height: 100px;
     overflow: hidden;
+}
+.wrapper-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 241, 241);
+}
+.wrapper-container > .wrapper-profile {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.wrapper-container > .wrapper-profile > .img-profile {
+    width: 300px;
+    height: 490px;
+    background-color: silver;
+    margin: auto;
+
 }

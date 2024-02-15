@@ -4,12 +4,12 @@ import '../css/style.css';
 function IncludeHeader()
 {
     useEffect(()=>{
-        let fade = document.querySelector('.fade');
+        let fade = document.querySelector('.menu-mobile');
         const titleHeader  = document.querySelector('.slide-menu-mobile')
         let i = false;
         titleHeader.addEventListener('click',()=>{
             if(i == false){
-                fade.style.display = 'block'
+                fade.style.display = 'flex';
                 i = true;
             }else{
                 fade.style.display = 'none'

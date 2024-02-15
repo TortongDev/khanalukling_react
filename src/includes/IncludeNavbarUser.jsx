@@ -1,8 +1,9 @@
-function MenuMobile()
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+function IncludeNavbar()
 {
     return (
         <>
-            <nav className="menu-mobile">
+            <nav className="wrapper-navbar navbar-user">
                 <ul>
                     <li><i className='fas fa-home'></i> หน้าแรก</li>
                     <li><i class="fa-solid fa-magnifying-glass-location"></i> รีวิว</li>
@@ -12,9 +13,12 @@ function MenuMobile()
                     <li><i class="fa-solid fa-arrow-right-to-bracket"></i> เข้าสู่ระบบ</li>
                     <li> <i class="fa-regular fa-address-card"></i> เกี่ยวกับ</li>
                 </ul>
-            </nav>
+                <div className="user-profile">
+                    <i class="fa-solid fa-user"></i>&emsp;
+                    <i class="fa-solid fa-envelope" style={{color:'orange'}}></i>
+                </div>
+            </nav>        
         </>
-    )
-
+    );
 }
-export default MenuMobile;
+export default IncludeNavbar;
