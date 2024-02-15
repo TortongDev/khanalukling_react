@@ -1,11 +1,11 @@
 
 import  IncludeHeader  from "../includes/IncludeHeader";
-import  IncludeNavbar  from "../includes/IncludeNavbar";
-import  IncludeNavbarMobile  from "../includes/IncludeNavbarMobile";
+import  IncludeNavbarUser  from "../includes/IncludeNavbarUser";
+import  IncludeNavbarMobileUser  from "../includes/IncludeNavbarMobileUser";
 import React, { useEffect } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
 import  $  from "jquery";
-function PageHome (){
+function PageHomeUser (){
     useEffect(()=>{
         $('.fade').slick({
             dots: true,
@@ -19,8 +19,9 @@ function PageHome (){
     
     return(<>
         <IncludeHeader />
-        <IncludeNavbar />
-        <IncludeNavbarMobile />
+        <IncludeNavbarUser />
+        
+        <IncludeNavbarMobileUser />
         <div className="wrapper-slide">
             <div class="fade">
                 <div className="flex">
@@ -38,7 +39,7 @@ function PageHome (){
             </div>
         </div>
         <div className="tabbar-title">
-            <h4 style={{margin:'0px'}}>รีวิวมาใหม่ <img src="new.webp" height={'30px'} alt="" /></h4>
+            <h4 style={{margin:'0px'}}>รีวิวมาใหม่ <img src="%PUBLIC_URL%/new.webp" height={'30px'} alt="" /></h4>
             <h4><i class="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-gallery">
@@ -85,4 +86,4 @@ function PageHome (){
         </article>
     </>);
 }
-export default PageHome;
+export default PageHomeUser;
