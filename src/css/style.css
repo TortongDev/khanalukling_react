@@ -1,32 +1,49 @@
-
 .wrapper-slide {
+    margin-top: 80px;
     height: 400px;
-    background-color: silver;
+    background-color: white;
     padding: 10px;
 }
+
+.clearfix {
+    overflow: auto;
+}
+
 .flex {
     display: flex;
     /* display: none; */
     justify-content: center;
     align-items: center;
 }
+
 .fadeIn {
     transition: 1s;
 }
-.fade {display: none;}
+
+.fade {
+    display: none;
+}
+
 .slick-arrow {
     position: absolute;
     top: 0;
     bottom: 0;
     height: 50px;
-    transform: rotate(-50%,-50%);
+    transform: rotate(-50%, -50%);
     background-color: rgb(24, 34, 182);
     color: #ffffff;
     outline: none;
     border: 0;
 }
-.slick-next {right: 10px;}
-.slick-prev {left: 10px;}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
 .tabbar-title {
     height: 30px;
     background-color: var(--bgDefault);
@@ -37,18 +54,21 @@
     padding-block: 10px;
     padding-inline: 40px;
 }
+
 .wrapper-gallery {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     padding-inline: 40px;
     padding-block: 20px;
 }
+
 .gallery {
     width: calc(100% / 1);
     height: 200px;
     background-color: var(--bgDefault);
 }
+
 .img-gallery {
     width: 98%;
     height: 150px;
@@ -56,16 +76,19 @@
     margin-block: 10px;
     background-color: whitesmoke;
 }
-.text-gallery{
+
+.text-gallery {
     padding: 3px;
     height: 100px;
     overflow: hidden;
 }
+
 .wrapper-container {
     width: 100%;
     height: 100%;
 }
-.wrapper-container > .wrapper-profile {
+
+.wrapper-container>.wrapper-profile {
     width: 600px;
     height: inherit;
     display: flex;
@@ -73,20 +96,49 @@
     margin: auto;
     padding-block-start: 150px;
 }
-.wrapper-container > .wrapper-profile > .img-profile {
+
+.wrapper-container>.wrapper-profile>.img-profile {
     width: 300px;
     height: 300px;
     background-color: silver;
     margin: 20px auto;
     border-radius: 50%;
 }
+
 .text-header {
     margin-top: 20px;
 }
-table > .table-profile {
+
+table>.table-profile {
     width: 100%;
     border: 0;
 }
-table.table-profile > tr > th {
+
+table.table-profile>tr>th {
     width: 150px !important;
+}
+
+.wrapper-gallery section:hover {
+    box-shadow: 1px 1px 10px 1px silver;
+    transition: 1s;
+    transform: scale(1.01, 1.01);
+    cursor: pointer;
+}
+
+.ico-action {
+    animation-name: ico;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ico {
+    0% {
+        transform: scale(1, 1);
+        border: 0 solid yellow;
+    }
+
+    100% {
+        transform: scale(1.01, 1.01);
+        border: 1px solid yellow
+    }
 }

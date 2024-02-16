@@ -60,3 +60,11 @@ nav.wrapper-navbar ul li {
 .menu-mobile {
     display: none;
 }
+.wrapper-slide > .banner {
+    object-fit: cover;
+    background-image: url("../../public/images/banner/LINE_ALBUM_3224_240216_1.jpg");
+    background-position: 0px 500px;
+    background-size: cover;
+    width: 100%;
+    height: 370px;
+}
