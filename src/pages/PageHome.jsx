@@ -53,21 +53,23 @@ function PageHome (){
             <h4  ><i class="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-gallery">
-            <section>
-                <div className="img-gallery">
-                    <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
-                </div>
-                <div className="text-gallery">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
-                </div>
-                <div className="footer-gallery grid-2">
-                    <div className="grid-col-1"></div>
-                    <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+            <a href="/review-page">
+                <section>
+                    <div className="img-gallery">
+                        <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
                     </div>
-                </div>
-            </section>
+                    <div className="text-gallery">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                    </div>
+                    <div className="footer-gallery grid-2">
+                        <div className="grid-col-1"></div>
+                        <div className="grid-col-2 grid-2">
+                            <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
+                            <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                        </div>
+                    </div>
+                </section>
+            </a>
             <section>
                 <div className="img-gallery">
                     <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />

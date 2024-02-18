@@ -201,3 +201,6 @@ section.review {
 .review-content-page {
     margin: 20px auto;
 }
+a {
+    text-decoration: none;
+}
