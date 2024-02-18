@@ -13,6 +13,7 @@ import PageHomeUser from './userPages/PageHome';
 import Profile from './userPages/profile';
 import ReviewPage from './pages/ReviewPage';
 import ReviewContentPage from './pages/ReviewContentPage';
+import Login from './pages/Login';
 const router = createBrowserRouter([
   
   {
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
   {
     path: '/review-content-page',
     element: <ReviewContentPage />
+
+  },
+  {
+    path: '/login-page',
+    element: <Login />
 
   }
 ]);

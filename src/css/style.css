@@ -204,3 +204,8 @@ section.review {
 a {
     text-decoration: none;
 }
+.login {
+    margin: auto;
+    margin-block-start: 140px;
+    max-width: 1000px;
+}
