@@ -1,6 +1,5 @@
 .wrapper-slide {
-    margin-top: 80px;
-    height: 400px;
+    margin-top: 140px;
     background-color: white;
     padding: 10px;
 }
@@ -45,14 +44,15 @@
 }
 
 .tabbar-title {
-    height: 30px;
-    background-color: var(--bgDefault);
+    height: 7dvh;
+    background-color: var(--bgTabbar);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--colorTabbar);
     padding-block: 10px;
     padding-inline: 40px;
+    box-shadow: var(--box-shadox);
 }
 
 .wrapper-gallery {
@@ -98,11 +98,15 @@
 }
 
 .wrapper-container>.wrapper-profile>.img-profile {
-    width: 300px;
-    height: 300px;
+    width: 300px !important;
+    height: 300px !important;
     background-color: silver;
     margin: 20px auto;
     border-radius: 50%;
+    background-image: url('../../public/images/profile/218366410_4138255459604062_5023524155501290718_n.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .text-header {
@@ -112,6 +116,9 @@
 table>.table-profile {
     width: 100%;
     border: 0;
+}
+.padding-0 {
+    padding: 0 !important;
 }
 
 table.table-profile>tr>th {
@@ -141,4 +148,56 @@ table.table-profile>tr>th {
         transform: scale(1.01, 1.01);
         border: 1px solid yellow
     }
+}
+.wrapper-news {
+    width: 100%;
+    min-height: 50vh;
+}
+.wrapper-news > section {
+    margin-block: 20px;
+    padding-inline: 40px;
+    height: 400px;
+}
+.intro-khanalukling {
+    text-align: center;
+    padding-inline: 40px;
+    padding-block: 40px;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: right;
+    padding: 5px;
+}
+footer {
+    text-align: center;
+    background-color: white;
+}
+.footer-gallery {padding: 3px;}
+.g-view-number {
+
+}
+.g-comment-number {
+
+}
+.wrapper-review {
+    padding-inline: 40px;
+    padding-block-start: 140px;
+}
+article.grid-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+section.review {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(182, 182, 182);
+}
+.intro-review {
+    margin-block: 30px;
+}
+.review-content-page {
+    margin: 20px auto;
 }

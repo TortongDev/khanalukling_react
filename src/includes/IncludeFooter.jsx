@@ -3,8 +3,8 @@ function IncludeFooter(){
     return (
         <>
             <footer>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, amet.<br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aliquam suscipit veniam!
+                &copy;Khanalukling 2024<br />
+                Website khanalukling Tour | khanalukling.co.th
             </footer>
         </>
     );

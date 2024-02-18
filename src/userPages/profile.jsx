@@ -10,9 +10,7 @@ function Profile(){
         <IncludeNavbarMobileUser />
             <div className="wrapper-container">
                 <div className="wrapper-profile">
-                    <div className="img-profile">
-                        Profile Image
-                    </div>
+                    <div className="img-profile"></div>
                     <div class="form-upload-avatar w3-container">
                         <label>Upload Image Avatar</label>
                         <input className="w3-input" type="file" name='img-avatar' id='img-avatar' />

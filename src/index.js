@@ -11,6 +11,8 @@ import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import PageHome from './pages/PageHome';
 import PageHomeUser from './userPages/PageHome';
 import Profile from './userPages/profile';
+import ReviewPage from './pages/ReviewPage';
+import ReviewContentPage from './pages/ReviewContentPage';
 const router = createBrowserRouter([
   
   {
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
   {
     path: '/user-profile',
     element: <Profile />
+  },
+  {
+    path: '/review-page',
+    element: <ReviewPage />
+
+  },
+  {
+    path: '/review-content-page',
+    element: <ReviewContentPage />
+
   }
 ]);
 
