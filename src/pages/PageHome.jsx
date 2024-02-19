@@ -7,6 +7,12 @@ import React, { useEffect } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
 import  $  from "jquery";
 function PageHome (){
+    const fetchAll = ()=>{
+        fetch('http://localhost/backend_khanalukling/Api/get-content')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+    }
     useEffect(()=>{
         $('.fade').slick({
             dots: true,
@@ -15,7 +21,9 @@ function PageHome (){
             autoplay: true,
             fade: true,
             cssEase: 'linear'
-          });
+        });
+    
+        fetchAll();
     })
     
     return(<>
