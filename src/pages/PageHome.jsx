@@ -6,6 +6,9 @@ import  IncludeFooter  from "../includes/IncludeFooter";
 import React, { useEffect } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
 import  $  from "jquery";
+import { useCookies } from 'react-cookie';
+const [cookies, setCookie] = useCookies(['name']);
+setCookie('name', 'newName');
 function PageHome (){
     useEffect(()=>{
         $('.fade').slick({
