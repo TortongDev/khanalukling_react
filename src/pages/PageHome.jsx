@@ -6,26 +6,19 @@ import  IncludeFooter  from "../includes/IncludeFooter";
 import React, { useEffect } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
 import  $  from "jquery";
-import { useCookies } from 'react-cookie';
-const [cookies, setCookie] = useCookies(['name']);
-setCookie('name', 'newName');
+import Cookies from "js-cookie";
+
 function PageHome (){
     const fetchAll = ()=>{
-        fetch('http://localhost/backend_khanalukling/Api/get-content')
+        fetch('http://localhost/backend_khanalukling/Api/get-content/'+Cookies.get("token"))
             .then(response => response.json())
             .then(data => console.log(data))
             .catch(error => console.log(error));
     }
     useEffect(()=>{
-        $('.fade').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            autoplay: true,
-            fade: true,
-            cssEase: 'linear'
+        Cookies.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9", {
+            expires: 7,
         });
-    
         fetchAll();
     })
     
@@ -36,20 +29,6 @@ function PageHome (){
             <IncludeNavbarMobile />
             <div className="wrapper-slide">
                 <div className="banner"></div>
-                <div class="fade">
-                    <div className="flex">
-                        <h2>Header 1</h2>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quasi! Placeat incidunt nobis, ratione autem ipsam, aliquid delectus aspernatur ea, cupiditate sit minus odit. Iure est, porro amet eius fugiat ducimus quas ipsa voluptatem, harum odit exercitationem natus ipsam dolor eligendi animi, illo minima repellendus sunt vitae vero officia consectetur provident? Rem laudantium ipsam sapiente, tenetur odio quos eum deserunt ipsa quod assumenda sed voluptatem suscipit cupiditate officia quia in magnam quibusdam, voluptatum repudiandae exercitationem! Velit impedit iste similique eligendi architecto earum nulla. Modi, commodi dolorum? Dolor numquam eligendi quam odit, molestias architecto molestiae harum sint, illum ad obcaecati deleniti.
-                    </div>
-                    <div className="flex">
-                        <h2>Header 2</h2>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quasi! Placeat incidunt nobis, ratione autem ipsam, aliquid delectus aspernatur ea, cupiditate sit minus odit. Iure est, porro amet eius fugiat ducimus quas ipsa voluptatem, harum odit exercitationem natus ipsam dolor eligendi animi, illo minima repellendus sunt vitae vero officia consectetur provident? Rem laudantium ipsam sapiente, tenetur odio quos eum deserunt ipsa quod assumenda sed voluptatem suscipit cupiditate officia quia in magnam quibusdam, voluptatum repudiandae exercitationem! Velit impedit iste similique eligendi architecto earum nulla. Modi, commodi dolorum? Dolor numquam eligendi quam odit, molestias architecto molestiae harum sint, illum ad obcaecati deleniti.
-                    </div> 
-                    <div className="flex">
-                        <h2>Header 3</h2>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quasi! Placeat incidunt nobis, ratione autem ipsam, aliquid delectus aspernatur ea, cupiditate sit minus odit. Iure est, porro amet eius fugiat ducimus quas ipsa voluptatem, harum odit exercitationem natus ipsam dolor eligendi animi, illo minima repellendus sunt vitae vero officia consectetur provident? Rem laudantium ipsam sapiente, tenetur odio quos eum deserunt ipsa quod assumenda sed voluptatem suscipit cupiditate officia quia in magnam quibusdam, voluptatum repudiandae exercitationem! Velit impedit iste similique eligendi architecto earum nulla. Modi, commodi dolorum? Dolor numquam eligendi quam odit, molestias architecto molestiae harum sint, illum ad obcaecati deleniti.
-                    </div>
-                </div>
             </div>
         </div>
         <div className="intro-khanalukling">
@@ -60,8 +39,8 @@ function PageHome (){
         </div>
         <div className="tabbar-title">
             {/* test style  */}
-            <h4 style={{'margin':'0px','font-size':'1rem;font-weight:bold;'}}>รีวิว <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","margin-top":"-3px"}} alt="" /></h4>
-            <h4  ><i class="fa-solid fa-up-right-from-square"></i></h4>
+            <h4 style={{'margin':'0px','fontSize':'1rem;font-weight:bold;'}}>รีวิว <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","margin-top":"-3px"}} alt="" /></h4>
+            <h4  ><i className="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-gallery">
             <a href="/review-page">
@@ -75,8 +54,8 @@ function PageHome (){
                     <div className="footer-gallery grid-2">
                         <div className="grid-col-1"></div>
                         <div className="grid-col-2 grid-2">
-                            <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                            <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                            <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                            <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                         </div>
                     </div>
                 </section>
@@ -91,8 +70,8 @@ function PageHome (){
                 <div className="footer-gallery grid-2">
                     <div className="grid-col-1"></div>
                     <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                     </div>
                 </div>
             </section>
@@ -106,8 +85,8 @@ function PageHome (){
                 <div className="footer-gallery grid-2">
                     <div className="grid-col-1"></div>
                     <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                     </div>
                 </div>
             </section>
@@ -121,8 +100,8 @@ function PageHome (){
                 <div className="footer-gallery grid-2">
                     <div className="grid-col-1"></div>
                     <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                     </div>
                 </div>
             </section>
@@ -136,16 +115,16 @@ function PageHome (){
                 <div className="footer-gallery grid-2">
                     <div className="grid-col-1"></div>
                     <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                     </div>
                 </div>
             </section>
         </article>
         <div className="tabbar-title">
             {/* test style  */}
-            <h4 style={{'margin':'0px','font-size':'1rem;font-weight:bold;'}}>ข่าว <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","margin-top":"-3px"}} alt="" /></h4>
-            <h4  ><i class="fa-solid fa-up-right-from-square"></i></h4>
+            <h4 style={{'margin':'0px','fontSize':'1rem;font-weight:bold;'}}>ข่าว <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","margin-top":"-3px"}} alt="" /></h4>
+            <h4  ><i className="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-news">
            <section>
@@ -156,8 +135,8 @@ function PageHome (){
                             <td>โดยคุณ user101</td>
                             <td>
                                 <div className="grid-col-2 grid-2 padding-0">
-                                    <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                                    <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                                    <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                                    <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                                 </div>
                             </td>
                         </tr>
@@ -169,8 +148,8 @@ function PageHome (){
                             <td>โดยคุณ user101</td>
                             <td>
                                 <div className="grid-col-2 grid-2 padding-0">
-                                    <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                                    <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                                    <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                                    <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                                 </div>
                             </td>
                         </tr>
@@ -182,8 +161,8 @@ function PageHome (){
                             <td>โดยคุณ user101</td>
                             <td>
                                 <div className="grid-col-2 grid-2 padding-0">
-                                    <div className="g-view-number"><i class="fa-solid fa-eye"></i> 1000</div>
-                                    <div className="g-comment-number"><i class="fa-regular fa-comment"></i> 1000</div>
+                                    <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
+                                    <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
                                 </div>
                             </td>
                         </tr>
@@ -196,8 +175,8 @@ function PageHome (){
 
         <div className="tabbar-title">
             {/* test style  */}
-            <h4 style={{'margin':'0px','font-size':'1rem;font-weight:bold;'}}>ประชาสัมพันธ์ <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","margin-top":"-3px"}} alt="" /></h4>
-            <h4  ><i class="fa-solid fa-up-right-from-square"></i></h4>
+            <h4 style={{'margin':'0px','fontSize':'1rem;font-weight:bold;'}}>ประชาสัมพันธ์ <img src={process.env.PUBLIC_URL+"/new.ico"} style={{"width":"30px","marginTop":"-3px"}} alt="" /></h4>
+            <h4  ><i className="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-news">
            <section>
