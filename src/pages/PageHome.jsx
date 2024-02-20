@@ -4,14 +4,11 @@ import  IncludeNavbar  from "../includes/IncludeNavbar";
 import  IncludeNavbarMobile  from "../includes/IncludeNavbarMobile";
 import  IncludeFooter  from "../includes/IncludeFooter";
 import React, { useEffect, useState } from 'react';
-import '../../node_modules/slick-carousel/slick/slick';
 import Cookies from "js-cookie";
 
 function PageHome (){
     const [contents, setContents] = useState([]);
-       
         useEffect(()=>{
-       
             fetch('http://localhost/backend_khanalukling/Api/get-content/'+Cookies.get("token"))
             .then(response => response.json())
             .then((data)=> {
@@ -49,7 +46,7 @@ function PageHome (){
             <a href="/review-page">
                 <section>
                     <div className="img-gallery">
-                        <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
+                        <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.webp'} width={'100%'} height={'150px'} alt="" />
                     </div>
                     <div className="text-gallery">
                         {contents.topic}
