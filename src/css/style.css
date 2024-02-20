@@ -96,7 +96,9 @@
     margin: auto;
     padding-block-start: 150px;
 }
-
+.jh {
+    color: red;
+}
 .wrapper-container>.wrapper-profile>.img-profile {
     width: 300px !important;
     height: 300px !important;

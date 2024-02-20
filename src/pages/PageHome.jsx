@@ -3,24 +3,27 @@ import  IncludeHeader  from "../includes/IncludeHeader";
 import  IncludeNavbar  from "../includes/IncludeNavbar";
 import  IncludeNavbarMobile  from "../includes/IncludeNavbarMobile";
 import  IncludeFooter  from "../includes/IncludeFooter";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../node_modules/slick-carousel/slick/slick';
-import  $  from "jquery";
 import Cookies from "js-cookie";
 
 function PageHome (){
-    const fetchAll = ()=>{
-        fetch('http://localhost/backend_khanalukling/Api/get-content/'+Cookies.get("token"))
+    const [contents, setContents] = useState([]);
+       
+        useEffect(()=>{
+       
+            fetch('http://localhost/backend_khanalukling/Api/get-content/'+Cookies.get("token"))
             .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
-    }
-    useEffect(()=>{
-        Cookies.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9", {
-            expires: 7,
-        });
-        fetchAll();
-    })
+            .then((data)=> {
+                setContents(data[0])
+                console.log(data[0].content_type)
+            }).catch(error => console.log(error));
+
+            Cookies.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9", {
+                expires: 7,
+            });
+    
+    },[])
     
     return(<>
         <div className="clearfix">
@@ -49,7 +52,7 @@ function PageHome (){
                         <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
                     </div>
                     <div className="text-gallery">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
+                        {contents.topic}
                     </div>
                     <div className="footer-gallery grid-2">
                         <div className="grid-col-1"></div>
@@ -60,66 +63,7 @@ function PageHome (){
                     </div>
                 </section>
             </a>
-            <section>
-                <div className="img-gallery">
-                    <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
-                </div>
-                <div className="text-gallery">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
-                </div>
-                <div className="footer-gallery grid-2">
-                    <div className="grid-col-1"></div>
-                    <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div className="img-gallery">
-                    <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
-                </div>
-                <div className="text-gallery">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
-                </div>
-                <div className="footer-gallery grid-2">
-                    <div className="grid-col-1"></div>
-                    <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div className="img-gallery">
-                    <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
-                </div>
-                <div className="text-gallery">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
-                </div>
-                <div className="footer-gallery grid-2">
-                    <div className="grid-col-1"></div>
-                    <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div className="img-gallery">
-                    <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.jpg'} width={'100%'} height={'150px'} alt="" />
-                </div>
-                <div className="text-gallery">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sequi!
-                </div>
-                <div className="footer-gallery grid-2">
-                    <div className="grid-col-1"></div>
-                    <div className="grid-col-2 grid-2">
-                        <div className="g-view-number"><i className="fa-solid fa-eye"></i> 1000</div>
-                        <div className="g-comment-number"><i className="fa-regular fa-comment"></i> 1000</div>
-                    </div>
-                </div>
-            </section>
+
         </article>
         <div className="tabbar-title">
             {/* test style  */}

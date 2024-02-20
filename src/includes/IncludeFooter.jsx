@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 
 function IncludeFooter(){
+    useEffect(()=>{
+           
+    })
     return (
         <>
             <footer>
