@@ -10,6 +10,12 @@ import { useCookies } from 'react-cookie';
 const [cookies, setCookie] = useCookies(['name']);
 setCookie('name', 'newName');
 function PageHome (){
+    const fetchAll = ()=>{
+        fetch('http://localhost/backend_khanalukling/Api/get-content')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+    }
     useEffect(()=>{
         $('.fade').slick({
             dots: true,
@@ -18,7 +24,9 @@ function PageHome (){
             autoplay: true,
             fade: true,
             cssEase: 'linear'
-          });
+        });
+    
+        fetchAll();
     })
     
     return(<>
