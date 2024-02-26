@@ -4,24 +4,28 @@ import  IncludeNavbar  from "../includes/IncludeNavbar";
 import  IncludeNavbarMobile  from "../includes/IncludeNavbarMobile";
 import  IncludeFooter  from "../includes/IncludeFooter";
 import React, { useEffect, useState } from 'react';
-import Cookies from "js-cookie";
+import ReviewContentPage from "./ReviewContentPage";
 
-function PageHome (){
+function PageHome(){
     const [contents, setContents] = useState([]);
+        const handleOnClick = (e) => {
+            e.preventDefault()
+            console.log(e.target);
+            fetch('http://localhost/backend_khanalukling/Api/get-content/1')
+                .then(response => response.json())
+                .then((data) =>{
+                    <ReviewContentPage />
+                })
+                .catch(error => console.log(error));
+        }
         useEffect(()=>{
-            fetch('http://localhost/backend_khanalukling/Api/get-content/'+Cookies.get("token"))
+            fetch('http://localhost/backend_khanalukling/Api/get-content/1')
             .then(response => response.json())
             .then((data)=> {
-                setContents(data[0])
-                console.log(data[0].content_type)
+                    setContents(data);
+                
             }).catch(error => console.log(error));
-
-            Cookies.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9", {
-                expires: 7,
-            });
-    
-    },[])
-    
+        },[])
     return(<>
         <div className="clearfix">
             <IncludeHeader />
@@ -31,6 +35,8 @@ function PageHome (){
                 <div className="banner"></div>
             </div>
         </div>
+
+        <div id="app">
         <div className="intro-khanalukling">
             <h2>เป้าหมาย</h2>
             <h5>
@@ -43,13 +49,15 @@ function PageHome (){
             <h4  ><i className="fa-solid fa-up-right-from-square"></i></h4>
         </div>
         <article className="wrapper-gallery">
-            <a href="/review-page">
+        {contents.map(item=>
+            <a href="" >
                 <section>
                     <div className="img-gallery">
-                        <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.webp'} width={'100%'} height={'150px'} alt="" />
+                        <img src={process.env.PUBLIC_URL+'/images/gallery/LINE_ALBUM_3224_240214_1.webp'} width={'100%'} height={'150px'} alt="" data-value={item.topic} onClick={handleOnClick} />
                     </div>
                     <div className="text-gallery">
-                        {contents.topic}
+                        <h5>{item.topic}</h5>
+                        {item.content_desc}
                     </div>
                     <div className="footer-gallery grid-2">
                         <div className="grid-col-1"></div>
@@ -59,8 +67,9 @@ function PageHome (){
                         </div>
                     </div>
                 </section>
+                
             </a>
-
+        )}
         </article>
         <div className="tabbar-title">
             {/* test style  */}
@@ -151,6 +160,7 @@ function PageHome (){
            </section>
            
         </article>
+        </div>
         <IncludeFooter />
     </>);
 }
